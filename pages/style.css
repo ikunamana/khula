@@ -1,0 +1,419 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Georgian;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: Georgian;
+    src: url(./fonts/bpg_nino_mtavruli_normal.ttf);
+}
+
+.logotext{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+@keyframes logoanim{
+    from{padding-right:500px;}
+    to{padding-right:160px;}
+}
+@keyframes logoanimleft{
+    from{padding-left: 500px;}
+    to{padding-left: 160px;}
+}
+@keyframes logoanima{
+    from{margin-bottom: 50px;}
+    to{margin-bottom:0;}
+} 
+.logoimg{
+    position: inherit;
+    animation-name: logoanima;
+    animation-duration: 2s;
+}
+
+
+.khulag {
+    animation-duration: 2s;
+    animation-name: logoanimleft;
+    padding-left: 160px;
+    font-size: larger;
+    font-weight: 1000;
+}
+.khula{
+    animation-duration: 2s;
+    animation-name: logoanim;
+    padding-right: 160px;
+    font-size: larger;
+    font-weight: 1000;
+
+}
+
+
+.logoimg{
+    transform: scale(1.2);
+    transition-duration: 2s;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+.khazi{
+    display: none;
+    width: 0px;
+    align-items: center;
+    margin-left: 80px;
+    transition-duration: 500ms;
+}
+.dropdown:hover .khazi{
+    width: 300px;
+    display: flow-root;
+    transition-duration: 500ms;
+    
+}
+
+.links{
+    top: 0px;
+    height: 80px;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    width:100%;  
+    background-color: rgba(255, 255, 255, 0.178);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    transition-duration: 1s;
+    box-shadow: 10px green;
+}
+
+a{
+    color: black;
+    font-weight: 400;
+    size: 16px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+a:hover{
+    transform: scale(1.3);
+    transition-duration: 0.4s;
+}
+
+@keyframes opacanim{
+    from{opacity: 0%;}
+    to{opacity: 100%}
+}
+
+html{
+    animation-name: opacanim;
+    animation-duration: 3s;
+    transition-duration: 1s;
+    transition: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 10%;
+    transition-duration: 1s;
+}
+
+.text{
+    width: 40%;
+    text-align:justify;
+    padding-right: 3%;
+}
+
+.text1{
+    width: 40%;
+    text-align:justify;
+    padding-left: 3%;
+}
+
+.cheese{
+    object-fit: contain;
+    overflow: hidden;
+    transition-duration: 1s;
+    border-radius: 3px;
+}
+
+.imagewrap:hover .cheese{
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+
+.imagewrap{
+    transition-duration: 1s;
+    width: 600px;
+    display: inline-block;
+    overflow: hidden;
+    object-fit: contain;
+    margin-left: 40px;
+    margin-right: 50px;
+    border-radius: 9px;
+    height: 300px;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    transition-duration: 1s;
+}
+.dropdown-content{
+    transform-origin: top left;
+    border-radius: 50px;
+    transform: scaleY(0);
+    float: right;
+    font-weight: 900;
+    backdrop-filter: grayscale;
+    display: block;
+    visibility: hidden;
+    min-width: 450px;
+    position: absolute;
+    justify-content: space-between;
+    z-index: 20;
+    transition-duration: 500ms;
+    border-radius: 10px;
+
+}
+li:hover a{
+    color: rgb(214, 250, 250);
+}
+li a{
+    color:whitesmoke
+}
+
+ul{
+    columns: 2;
+    line-height: 50px;
+    height: 50%; 
+    padding-left: 40px;
+    display: block;
+}
+
+li:active{
+    color: red;
+}
+li{
+    transition-duration: 0.4s;
+    size: 16px;
+}
+li:hover {
+    transform: scale(1.1);
+    transition-duration: 0.4s;
+    color: rgb(255, 217, 0);
+    text-decoration: none;
+
+}
+.dropdown:hover .triangle{
+    display: block;
+    position: inherit;
+    margin-left: 10px;
+    padding-top: 0px;
+    animation-name: opacAnim;
+    animation-duration: 1s;
+
+}
+
+
+.dropdown:hover  ul{
+    columns: 2;
+    line-height: 50px;
+    height: 50%; 
+    padding-left: 40px;
+    display: block;
+    animation-name: opacAnim;
+    animation-duration: 500ms;
+
+
+}
+.dropdown:hover  .dropdown-content{
+    display: block;
+    visibility: visible;
+    margin-right: 30px;
+    font-size: 16px;
+    background-color: rgba(6, 82, 19, 0.842);
+    transition-duration: 300ms;
+    border-radius: 10px;
+    padding-top: 10px;
+    z-index: 20;  
+    overflow: hidden;
+    height: 340px;
+    border:inset 3px rgba(34, 73, 3, 0.288);
+    transform: scaleY(1);
+    transform-origin: top left;
+}
+
+@keyframes menuAnim{
+    0%{ opacity: 0; height: 1px;}
+    100%{opacity: 1;height: 340px;}
+}
+@keyframes dropAnimation{
+    0%{transform:scale(0); opacity: 0; }
+    60%{transform:scale(1.1); opacity: 0.5;}
+    100%{transform:scale(1); opacity: 1;}
+}
+
+
+
+/* ///product/// */
+
+.productdiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.butshek{
+    align-items: center;
+    top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.shekveta{
+    align-items: center;
+    display: flex;
+    top: 20px;
+    height: 40px;
+    width: 120px;
+    size: 20px;
+    justify-content: center;
+    background-color: rgba(104, 231, 136, 0.692);
+    border-radius: 5px;
+    transition-duration: 1s;
+    border: none;
+}
+.shekveta:hover{
+    background-color: rgb(172, 230, 114);
+    border-radius: 9px;
+    transition-duration: 1s;
+}
+
+/* Shekveta */
+
+.maindiv{
+    position: absolute;
+    border-radius: 5px;
+    padding: 20px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    backdrop-filter: blur(50px);
+    background-color: rgb(0,0,0,0.4);
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+.shekvetadiv{
+    padding-top: 15px;
+    padding-left: 15px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 400px;
+    height: 40%;
+    margin-left:25%;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    transition-duration: 1s;
+}
+.close{
+    cursor: pointer;
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bolder;
+    position: absolute;
+    padding-left: 93%;
+    margin-top: -14px;
+}
+
+@keyframes slideIn{
+    from{bottom: -300px; opacity: 0;}
+    to{bottom: 0; opacity: 1;}
+}
+@keyframes fadeIn{
+    from{opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+input[type=text], select{
+    width: 135%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=number]{
+    width: 135%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=name]{
+    width: 135%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=email]{
+        width: 135%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+}
+
+input[type=submit]{
+    width: 135%;
+    background-color: grey;
+    color: aliceblue;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+
+}
+input[type=submit]:hover{
+    background-color: rgb(172, 230, 114);
+    transition-duration: 0.3s;
+}
+.succes{
+    display:flex;
+    justify-content:space-around;
+    text-align: center;
+    align-items:center;
+}
+
+
+/* //card// */

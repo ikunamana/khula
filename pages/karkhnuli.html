@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khula • ხულა</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logotext">
+        <div>
+            <p class="khulag">ხულა</p>
+        </div>
+        <div>
+            <img height="100px"  class="logoimg" src="./images/264960237_106552825212202_972583597574527585_n.jpg" alt="logo">
+            </div>
+            <div>
+                <p class="khula">KHULA</p>
+            </div>
+            </div>
+            <div class="links">
+                <a href="./index.html">მთავარი</a>
+
+                <div class="dropdown">
+                <button href="./index.html" class="dropbtn">პროდუქტები</button> 
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="./sulguni.html">სულგუნი</a><br></li>
+                        <li><a href="./imeruli.html">იმერული</a><br></li>
+                        <li><a href="./karkhnuli.html">ქარხნული</a><br></li>
+                        <li><a href="./tchetchili.html">ჩეჩილი</a><br></li>
+                        <li><a href="./milk.html">რძე</a><br></li>
+                        <li><a href="./matsoni.html">მაწონი</a><br></li>
+
+                    </ul>
+                    <hr class="khazi"> 
+                    <br>
+                    <ul>
+                        <li><a href="./nuts.html">კაკალი</a><br></li>
+                        <li><a href="./honey.html">თაფლი</a><br></li>
+                        <li><a href="./lobio.html">სოფლის ლობიო</a><br></li>
+                        <li><a href="./eggs.html">კვერცხი</a><br></li>
+                        <li><a href="./mtchadisPkvili.html">მჭადის ფქვილი</a><br></li>
+                        <li><a href="./churchkhela.html">ჩურჩხელა</a><br></li>
+                    </ul>
+            </div>
+            </div>
+                <a href="./index.html">შეკვეთა</a>
+                <a href="./index.html">მისამართი</a>
+                <a href="./index.html">კონტაქტი</a>
+            </div>
+    </div>
+<br><br><br><hr><br><br><br><tr></tr>
+<div class="productdiv">
+    <div class="imgcharcho">
+    <img src="./images/kar-kveli.jpg" alt="sulguni">
+    </div>
+    <div>
+        <strong>დასახელება:</strong><p>ქარხნული.</p><br><hr><br>
+        <strong>შემადგენლობა:</strong><p>100%-ით ნატურალური ძროხის რძე.</p><br><hr><br>
+        <strong>წარმომავლობა:</strong><p>რაჭა.</p><br><hr><br>
+        <strong>ფასი (კგ):</strong><h2> 20.90 GEL</h2><br><br><br><br>
+        <div class="butshek">
+            <button id="btns" onclick="function ika()"  class="shekveta">შეკვეთა</button>
+        </div>
+    </div>
+</div>
+<div id="maindiv" class="maindiv">
+        
+        <div id="shekvetadiv" class="shekvetadiv">
+            <div>
+            <span  onclick="function daxurva()" class="close" id="close" >x</span>
+        </div>
+            <form action="./succses.html">
+                <label for="product">აირჩიეთ პროდუქტი</label><br>
+                <select name="product" id="product">
+                <option value="imeruli">იმერული</option>
+                <option value="sulguni">სულგუნი</option>
+                <option value="sulguni">კაკალი</option>
+                <option value="sulguni">ჩურჩხელა</option>
+                <option value="sulguni">რძე</option>
+                <option value="sulguni">თაფლი</option>
+                <option value="sulguni">მაწონი</option>
+                <option value="sulguni">მჭადის ფქვილი</option>
+                <option value="sulguni">კვერცხი</option>
+                <option value="sulguni">ლობიო</option>
+                <option value="sulguni">ჩეჩილი</option>
+                <option value="sulguni">ქარხნული</option>
+            </select>
+            
+            <label for="tsona">რაოდენობა</label>
+            <input type="number" id="raodenoba" name="raodenoba" placeholder="ჩაწერეთ სასურველი რაოდენობა">
+            <input type="submit" value="გაგზავნა">
+         </form>     
+        </div>
+    </div>
+    <script src="./main.js"></script>
+
+    </body>
+    </html>
