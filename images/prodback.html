@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US"
+	prefix="og: https://ogp.me/ns#" >
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US"
+	prefix="og: https://ogp.me/ns#" >
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US"
+	prefix="og: https://ogp.me/ns#" >
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US"
+	prefix="og: https://ogp.me/ns#" >
+<!--<![endif]-->
+<head><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventListener,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventListener,e.eventOptions)))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{const n=document.createElement("script");let i;[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type",i=e.nodeValue),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")&&this._isValidScriptType(i)?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}_isValidScriptType(e){return!e||""===e||"string"==typeof e&&["text/javascript","text/x-javascript","text/ecmascript","text/jscript","application/javascript","application/x-javascript","application/ecmascript","application/jscript","module"].includes(e.toLowerCase())}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript;n||console.error("WPRocket unable to document.write this: "+t);const i=document.createRange(),r=n.parentElement;let a=e.get(n);void 0===a&&(a=n.nextSibling,e.set(n,a));const o=document.createDocumentFragment();i.setStart(o,0),o.appendChild(i.createContextualFragment(t)),r.insertBefore(o,a)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();
+</script>
+	<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" async=true>
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://quantcast.mgr.consensu.org'
+    .concat('/choice/', 'deCwlQAR_q3bc', '/', host, '/choice.js')
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            event.source.postMessage(returnMsg, '*');
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+	<script>
+__tcfapi('addEventListener', 2, function(tcData, success) {
+    if (success) {
+        if (tcData.eventStatus == 'useractioncomplete' || tcData.eventStatus == 'tcloaded') {
+            var hasStoreOnDeviceConsent = tcData.purpose.consents[1] || false;
+
+            if (hasStoreOnDeviceConsent) {
+                var adsbygoogle_script = document.createElement('script');
+                adsbygoogle_script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+                document.head.appendChild(adsbygoogle_script);
+            }
+        }
+    }
+});
+</script>
+<script data-ad-client="ca-pub-6752320144624820" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+
+<link rel="pingback" href="https://www.pngmart.com/xmlrpc.php" />
+<link rel="icon" href="/files/favicon.ico" type="image/x-icon" />
+<link rel="alternate" hreflang="en" href="https://www.pngmart.com" />
+<link rel="alternate" hreflang="ar" href="https://www.pngmart.com/ar/" />
+<link rel="alternate" hreflang="de" href="https://www.pngmart.com/de/" />
+<link rel="alternate" hreflang="es" href="https://www.pngmart.com/es/" />
+<link rel="alternate" hreflang="fr" href="https://www.pngmart.com/fr/" />
+<link rel="alternate" hreflang="id" href="https://www.pngmart.com/id/" />
+<link rel="alternate" hreflang="it" href="https://www.pngmart.com/it/" />
+<link rel="alternate" hreflang="ko" href="https://www.pngmart.com/ko/" />
+<link rel="alternate" hreflang="nl" href="https://www.pngmart.com/nl/" />
+<link rel="alternate" hreflang="pt" href="https://www.pngmart.com/pt/" />
+<link rel="alternate" hreflang="ru" href="https://www.pngmart.com/ru/" />
+<link rel="alternate" hreflang="th" href="https://www.pngmart.com/th/" />
+<link rel="alternate" hreflang="tl" href="https://www.pngmart.com/tl/" />
+<link rel="alternate" hreflang="tr" href="https://www.pngmart.com/tr/" />
+
+		<!-- All in One SEO 4.1.5.2 -->
+		<title>Label PNG Transparent Image | PNG Mart</title><link rel="stylesheet" href="https://www.pngmart.com/wp-content/cache/min/1/dfa3a12b5bb27079a0282e3c817be464.css" media="all" data-minify="1" />
+		<meta name="description" content="Browse and download free Label PNG Transparent Image transparent background image available in high-quality resolution in various styles and sizes." />
+		<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<meta name="keywords" content="label,art" />
+		<link rel="canonical" href="https://www.pngmart.com/image/133375" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="PNG Mart |" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Label PNG Transparent Image | PNG Mart" />
+		<meta property="og:description" content="Browse and download free Label PNG Transparent Image transparent background image available in high-quality resolution in various styles and sizes." />
+		<meta property="og:url" content="https://www.pngmart.com/image/133375" />
+		<meta property="og:image" content="https://www.pngmart.com/files/8/Label-PNG-Transparent-Image.png" />
+		<meta property="og:image:secure_url" content="https://www.pngmart.com/files/8/Label-PNG-Transparent-Image.png" />
+		<meta property="og:image:width" content="1136" />
+		<meta property="og:image:height" content="720" />
+		<meta property="article:published_time" content="2018-11-09T13:48:24+00:00" />
+		<meta property="article:modified_time" content="2018-11-09T13:48:24+00:00" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:domain" content="www.pngmart.com" />
+		<meta name="twitter:title" content="Label PNG Transparent Image | PNG Mart" />
+		<meta name="twitter:description" content="Browse and download free Label PNG Transparent Image transparent background image available in high-quality resolution in various styles and sizes." />
+		<meta name="twitter:image" content="https://www.pngmart.com/files/8/Label-PNG-Transparent-Image.png" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/www.pngmart.com\/#website","url":"https:\/\/www.pngmart.com\/","name":"PNG Mart","inLanguage":"en-US","publisher":{"@id":"https:\/\/www.pngmart.com\/#organization"}},{"@type":"Organization","@id":"https:\/\/www.pngmart.com\/#organization","name":"PNG Mart","url":"https:\/\/www.pngmart.com\/"},{"@type":"BreadcrumbList","@id":"https:\/\/www.pngmart.com\/image\/133375#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.pngmart.com\/#listItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/www.pngmart.com\/","name":"Home","description":"Download amazing high-quality latest PNG images transparent backgrounds images for free in various categories from Animals, Food to Entertainment PNG Images.","url":"https:\/\/www.pngmart.com\/"}}]},{"@type":"Person","@id":"https:\/\/www.pngmart.com\/image\/author\/eric#author","url":"https:\/\/www.pngmart.com\/image\/author\/eric","name":"Eric","image":{"@type":"ImageObject","@id":"https:\/\/www.pngmart.com\/image\/133375#authorImage","url":"https:\/\/secure.gravatar.com\/avatar\/58a54a21048b0d87b5abc7d65004b776?s=96&d=mm&r=g","width":96,"height":96,"caption":"Eric"}},{"@type":"WebPage","@id":"https:\/\/www.pngmart.com\/image\/133375#webpage","url":"https:\/\/www.pngmart.com\/image\/133375","name":"Label PNG Transparent Image | PNG Mart","description":"Browse and download free Label PNG Transparent Image transparent background image available in high-quality resolution in various styles and sizes.","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/www.pngmart.com\/#website"},"breadcrumb":{"@id":"https:\/\/www.pngmart.com\/image\/133375#breadcrumblist"},"author":"https:\/\/www.pngmart.com\/image\/author\/eric#author","creator":"https:\/\/www.pngmart.com\/image\/author\/eric#author","image":{"@type":"ImageObject","@id":"https:\/\/www.pngmart.com\/#mainImage","url":"https:\/\/www.pngmart.com\/files\/8\/Label-PNG-Transparent-Image.png","width":1136,"height":720},"primaryImageOfPage":{"@id":"https:\/\/www.pngmart.com\/image\/133375#mainImage"},"datePublished":"2018-11-09T13:48:24+00:00","dateModified":"2018-11-09T13:48:24+00:00"},{"@type":"Article","@id":"https:\/\/www.pngmart.com\/image\/133375#article","name":"Label PNG Transparent Image | PNG Mart","description":"Browse and download free Label PNG Transparent Image transparent background image available in high-quality resolution in various styles and sizes.","inLanguage":"en-US","headline":"Label PNG Transparent Image","author":{"@id":"https:\/\/www.pngmart.com\/image\/author\/eric#author"},"publisher":{"@id":"https:\/\/www.pngmart.com\/#organization"},"datePublished":"2018-11-09T13:48:24+00:00","dateModified":"2018-11-09T13:48:24+00:00","articleSection":"Art, Label","mainEntityOfPage":{"@id":"https:\/\/www.pngmart.com\/image\/133375#webpage"},"isPartOf":{"@id":"https:\/\/www.pngmart.com\/image\/133375#webpage"},"image":{"@type":"ImageObject","@id":"https:\/\/www.pngmart.com\/#articleImage","url":"https:\/\/www.pngmart.com\/files\/8\/Label-PNG-Transparent-Image.png","width":1136,"height":720}}]}
+		</script>
+		<script type="rocketlazyloadscript" data-rocket-type="text/javascript" >
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-196746120-3", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script type="rocketlazyloadscript" async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel='dns-prefetch' href='//www.pngmart.com' />
+<link rel='dns-prefetch' href='//netdna.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="PNG Mart &raquo; Feed" href="https://www.pngmart.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="PNG Mart &raquo; Comments Feed" href="https://www.pngmart.com/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="PNG Mart &raquo; Label PNG Transparent Image Comments Feed" href="https://www.pngmart.com/image/133375/feed" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	
+
+
+
+
+
+
+<link rel='stylesheet' id='googlefonts-css-css'  href='https://fonts.googleapis.com/css?family=Droid+Sans&#038;ver=1e96cb0d6776511765e583fc42e2acca&#038;display=swap' type='text/css' media='all' />
+
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.pngmart.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.pngmart.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://www.pngmart.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.pngmart.com/wp-json/wp/v2/posts/133375" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.pngmart.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.pngmart.com/wp-includes/wlwmanifest.xml" /> 
+
+<link rel='shortlink' href='https://www.pngmart.com/?p=133375' />
+    <style type="text/css">
+    
+    
+	
+		</style>
+			<style>
+			#related_posts_thumbnails li{
+				border-right: 1px solid #DDDDDD;
+				background-color: #FFFFFF			}
+			#related_posts_thumbnails li:hover{
+				background-color: #EEEEEF;
+			}
+			.relpost_content{
+				font-size:	16px;
+				color: 		#333333;
+			}
+			.relpost-block-single{
+				background-color: #FFFFFF;
+				border-right: 1px solid  #DDDDDD;
+				border-left: 1px solid  #DDDDDD;
+				margin-right: -1px;
+			}
+			.relpost-block-single:hover{
+				background-color: #EEEEEF;
+			}
+		</style>
+
+	<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="//services.vlitag.com/adv1/?q=2a9c0a15b8234f09dfc6aba5e11cd711"></script><script type="rocketlazyloadscript"> var vitag = vitag || {};</script>
+</head>
+
+<body class="post-template-default single single-post postid-133375 single-format-standard bg pngmart singular">
+  <style>
+._bsa_flexbar .flexbar-logo img { background: none; }
+</style><script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+(function(){
+	if(typeof _bsa !== 'undefined' && _bsa) {
+  		// format, zoneKey, segment:value, options
+  		_bsa.init('flexbar', 'CK7DC2JN', 'placement:pngmartcom');
+  	}
+})();
+</script>
+	<script type="rocketlazyloadscript" async data-cfasync="false">
+       const url = new URL(window.location.href);
+       const clickID = url.searchParams.get("click_id");
+       const sourceID = url.searchParams.get("source_id");
+
+       const s = document.createElement("script");
+       s.dataset.cfasync = "false";
+       s.src = "https://system-notify.app/f/sdk.js?z=413224";
+       s.onload = (opts) => {
+           opts.zoneID = 413224;
+           opts.extClickID = clickID;
+           opts.subID1 = sourceID;
+           opts.actions.onPermissionGranted = () => {};
+           opts.actions.onPermissionDenied = () => {};
+           opts.actions.onAlreadySubscribed = () => {};
+           opts.actions.onError = () => {};
+       };
+       document.head.appendChild(s);
+</script>
+	<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e2ac09f21eca500127be8d2&product=sop' async='async'></script>
+		<div id="navigation"  role="banner">
+
+			<nav id="access" class="container_16 containermargin" role="navigation">
+			<div class="nav1">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link screen-reader-text"><a class="assistive-text" href="#content" title="Skip to primary content">Skip to primary content</a></div>
+                <div id="mobilemenu" class="notonscreen">
+                    <div align="center" style="padding:10px;">
+                    	<a href="https://www.pngmart.com/" title="PNG Mart">
+                    	                        	        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2030'%3E%3C/svg%3E" alt="PNG Mart" width="200" height="30" data-lazy-src="/logo.jpg"><noscript><img src="/logo.jpg" alt="PNG Mart" width="200" height="30"></noscript>
+                    	                            </a>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="sf-logomenu notonmobile">
+                    <p>
+                    	<a href="https://www.pngmart.com/">
+                    		                    	        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2030'%3E%3C/svg%3E" alt="PNG Mart" width="200" height="30" data-lazy-src="/logo.jpg"><noscript><img src="/logo.jpg" alt="PNG Mart" width="200" height="30"></noscript>
+                    	                            </a>
+                    </p>
+                </div>
+								<div class="menu-top-container"><ul id="primary" class="s_style sf-menu sf-js-enabled sf-arrows"><li id="menu-item-102574" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102574"><a href="/">Home</a></li>
+<li id="menu-item-102573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102573"><a href="https://www.pngmart.com/categories">Categories</a></li>
+<li id="menu-item-130852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130852"><a href="https://www.pngmart.com/contact">Contact</a></li>
+<li id="menu-item-335071" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-335071"><a href="https://www.pngmart.com/upload">Upload</a></li>
+</ul></div>
+				<ul id="iconmenu" class="sf-menu sf-js-enabled">
+                    <li id="searchicon" class="notonmobile icon-search"><a href="" class="sf-with-ul"></a>
+                        <ul id="searchul" class="sub-menu" style="left: auto; right: 0px;">
+                            <li><form role="search" method="get" id="searchform" class="searchform" action="https://www.pngmart.com">
+    <div>
+    <label class="screen-reader-text" for="s">Search for:</label>
+    <input type="text" value="" name="s" id="s">
+    <input type="submit" id="searchsubmit" value="Go">
+    </div>
+</form>
+</li>
+                        </ul>
+                    </li>
+                </ul>								  
+				<div style="clear:both;"></div>
+			</div>
+			</nav><!-- #access -->
+
+	</div><!-- #navigation -->
+	
+										</div>
+	
+    <div id="wrapper" class="hfeed">
+	    <div id="contentcontainer" class="container_16 containermargin">
+			<center><div class="landscape_ad_pos" style="margin-bottom: 20px;"></div>
+<script type="rocketlazyloadscript">
+        (function () {
+            var adPos = document.getElementsByClassName('landscape_ad_pos');
+            var mobile_ad_id = "vi_1141143424";        // 300x250
+            var desktop_ad_id = "vi_1141143430";        // 970x250
+            var ad_id = window.innerWidth <= 480 ? mobile_ad_id : desktop_ad_id;
+            for (var i = 0; i < adPos.length; i++) {
+                adPos[i].innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+            }
+            (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+                viAPItag.display(ad_id);
+            });
+        }())
+    </script></center>
+        
+
+			<div id="content" class="grid_10" role="main">
+
+						<div style="clear:both;"></div>
+
+	
+	
+        <div style="clear:both;"></div>
+	
+    	
+	<header>        
+<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/"> <!-- Breadcrumb NavXT 6.6.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Home Page" href="https://www.pngmart.com" class="home" ><span property="name">Home</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Art category" href="https://www.pngmart.com/image/category/art-png" class="taxonomy category" ><span property="name">Art</span></a><meta property="position" content="2"></span> &gt; <span class="post post-post current-item">Label PNG Transparent Image</span> </div>
+		<div id = "vdo_ai_div"></div><script>(function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//a.vdo.ai/core/pngmart/vdo.ai.js');</script>
+		<h1 class="entry-title">Label PNG Transparent Image</h1>
+	</header><!-- .entry-header -->
+
+
+	<div class="entry-content">
+
+<p>Browse and download free Label PNG Transparent Image. This image categorized under Art  tagged in Label,  you can use this image freely on your designing projects. The pixel of this PNG transparent background is 1136x720 and size is 68 Kb. It is available in high-quality resolution for personal use.
+		</p>
+		
+<p><center><a href="https://www.pngmart.com/image/133375/png/133374"  title="Label PNG Transparent Image" alt="Label PNG Transparent Image" target="_blank" ><img width="1136" height="720" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201136%20720'%3E%3C/svg%3E" class="attachment-full size-full wp-post-image" alt="Label PNG Transparent Image" data-lazy-src="https://www.pngmart.com/files/8/Label-PNG-Transparent-Image.png" /><noscript><img width="1136" height="720" src="https://www.pngmart.com/files/8/Label-PNG-Transparent-Image.png" class="attachment-full size-full wp-post-image" alt="Label PNG Transparent Image" /></noscript></a></center><br>		<br>
+		<center><span style="font-size:0.8em">Advertisement</span><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6752320144624820"
+     crossorigin="anonymous"></script>
+<!-- pngmart horizontal responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6752320144624820"
+     data-ad-slot="3885404392"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></center><br><strong>Title:</strong> Label PNG Transparent Image<br><strong>PNG Image Dimension:</strong> 1136x720<br><strong>File Size:</strong> 68 Kb<br>
+<strong>Image Type:</strong> .png<br>
+<strong>Posted on:</strong> Nov 9th, 2018<br>
+<strong>Category:</strong> <a href="https://www.pngmart.com/image/category/art-png" rel="category tag">Art</a><br>
+<strong>Tags: <a href="https://www.pngmart.com/image/tag/label" rel="tag">Label</a></strong>
+	<br/ >
+	<br/ >
+	<div class="sharethis-inline-share-buttons"></div>
+	<br>
+	<b>Image License:</b>
+<br>
+✅Free for personal use only
+<br>
+❌Commercial Usage: Not allowed
+	<br>
+	<center><a href="https://www.pngmart.com/files/8/Label-PNG-Transparent-Image.png" class="download" download>Download PNG File 📥</a></center>
+	<br>
+
+</p>
+<h2 class="related-title">More PNG Images</h2>
+<!-- relpost-thumb-wrapper --><div class="relpost-thumb-wrapper"><!-- filter-class --><div class="relpost-thumb-container"><div style="clear: both"></div><div style="clear: both"></div><!-- relpost-block-container --><div class="relpost-block-container"><a class="relpost-block-single" href="https://www.pngmart.com/image/133357"><div class="relpost-custom-block-single" style="width: 80px; height: 170px;"><div class="relpost-block-single-image" alt="Label PNG Clipart"  style="background: transparent url(https://www.pngmart.com/files/8/Label-PNG-Clipart-80x80.png) no-repeat scroll 0% 0%; width: 80px; height: 80px;"></div><div class="relpost-block-single-text"  style="font-family: Arial;  font-size: 16px;  color: #333333;">Label PNG Clipart</div></div></a><a class="relpost-block-single" href="https://www.pngmart.com/image/133353"><div class="relpost-custom-block-single" style="width: 80px; height: 170px;"><div class="relpost-block-single-image" alt="Label Download PNG Image"  style="background: transparent url(https://www.pngmart.com/files/8/Label-Download-PNG-Image-80x80.png) no-repeat scroll 0% 0%; width: 80px; height: 80px;"></div><div class="relpost-block-single-text"  style="font-family: Arial;  font-size: 16px;  color: #333333;">Label Download PNG Image</div></div></a><a class="relpost-block-single" href="https://www.pngmart.com/image/133351"><div class="relpost-custom-block-single" style="width: 80px; height: 170px;"><div class="relpost-block-single-image" alt="Label Background PNG"  style="background: transparent url(https://www.pngmart.com/files/8/Label-Background-PNG-80x80.png) no-repeat scroll 0% 0%; width: 80px; height: 80px;"></div><div class="relpost-block-single-text"  style="font-family: Arial;  font-size: 16px;  color: #333333;">Label Background PNG</div></div></a><a class="relpost-block-single" href="https://www.pngmart.com/image/133379"><div class="relpost-custom-block-single" style="width: 80px; height: 170px;"><div class="relpost-block-single-image" alt="Label PNG Transparent"  style="background: transparent url(https://www.pngmart.com/files/8/Label-PNG-Transparent-80x80.png) no-repeat scroll 0% 0%; width: 80px; height: 80px;"></div><div class="relpost-block-single-text"  style="font-family: Arial;  font-size: 16px;  color: #333333;">Label PNG Transparent</div></div></a><a class="relpost-block-single" href="https://www.pngmart.com/image/133373"><div class="relpost-custom-block-single" style="width: 80px; height: 170px;"><div class="relpost-block-single-image" alt="Label PNG Picture"  style="background: transparent url(https://www.pngmart.com/files/8/Label-PNG-Picture-80x80.png) no-repeat scroll 0% 0%; width: 80px; height: 80px;"></div><div class="relpost-block-single-text"  style="font-family: Arial;  font-size: 16px;  color: #333333;">Label PNG Picture</div></div></a><a class="relpost-block-single" href="https://www.pngmart.com/image/133371"><div class="relpost-custom-block-single" style="width: 80px; height: 170px;"><div class="relpost-block-single-image" alt="Label PNG Pic"  style="background: transparent url(https://www.pngmart.com/files/8/Label-PNG-Pic-80x80.png) no-repeat scroll 0% 0%; width: 80px; height: 80px;"></div><div class="relpost-block-single-text"  style="font-family: Arial;  font-size: 16px;  color: #333333;">Label PNG Pic</div></div></a><a class="relpost-block-single" href="https://www.pngmart.com/image/133385"><div class="relpost-custom-block-single" style="width: 80px; height: 170px;"><div class="relpost-block-single-image" alt="Label Transparent PNG"  style="background: transparent url(https://www.pngmart.com/files/8/Label-Transparent-PNG-80x80.png) no-repeat scroll 0% 0%; width: 80px; height: 80px;"></div><div class="relpost-block-single-text"  style="font-family: Arial;  font-size: 16px;  color: #333333;">Label Transparent PNG</div></div></a><a class="relpost-block-single" href="https://www.pngmart.com/image/133369"><div class="relpost-custom-block-single" style="width: 80px; height: 170px;"><div class="relpost-block-single-image" alt="Label PNG Photos"  style="background: transparent url(https://www.pngmart.com/files/8/Label-PNG-Photos-80x80.png) no-repeat scroll 0% 0%; width: 80px; height: 80px;"></div><div class="relpost-block-single-text"  style="font-family: Arial;  font-size: 16px;  color: #333333;">Label PNG Photos</div></div></a></div><!-- close relpost-block-container --><div style="clear: both"></div></div><!-- close filter class --></div><!-- close relpost-thumb-wrapper -->        
+<br>
+		
+			</div><!-- .entry-content -->
+	<div class="facebook-like">
+		<div id="leftcolumn">Follow <a href="https://www.pngmart.com/image/author/eric">Eric</a>  for amazing daily stuff &rarr;&nbsp</div>
+				
+		
+		    </div>
+	
+    
+	
+
+	<footer class="entry-meta">
+	
+			</footer><!-- .entry-meta -->
+</article><!-- #post-133375 -->
+	<div id="taboola-below-main-column">
+		<aside id="text-7" class="widget widget_text">			<div class="textwidget"></div>
+		</aside>	</div>
+
+
+
+
+					
+			</div><!-- #content -->
+
+		
+			<div id="sidebar" class="grid_6" role="complementary">
+	<div id="primary" class="widget-area">
+		<div class="xoxo">
+
+			<aside id="search-2" class="widget widget_search"><h3 class="widget-title">Search PNG File</h3><form role="search" method="get" id="searchform" class="searchform" action="https://www.pngmart.com">
+    <div>
+    <label class="screen-reader-text" for="s">Search for:</label>
+    <input type="text" value="" name="s" id="s">
+    <input type="submit" id="searchsubmit" value="Go">
+    </div>
+</form>
+</aside><aside id="custom_html-14" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><center><span style="font-size:0.8em">Advertisement</span><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- mart link ad unit -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6752320144624820"
+     data-ad-slot="5057209545"
+     data-ad-format="link"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center></div></aside><aside id="custom_html-15" class="widget_text widget widget_custom_html"><h3 class="widget-title">Connect with Us</h3><div class="textwidget custom-html-widget"><div class="textwidget custom-html-widget"><a href="https://www.facebook.com/pngmart" class="fa fa-facebook" target="_blank" rel="noopener"></a>
+<a href="https://www.twitter.com/pngmart" class="fa fa-twitter" target="_blank" rel="noopener"></a>
+<a href="https://feeds.feedburner.com/PngMart" class="fa fa-rss" target="_blank" rel="noopener"></a>
+</div></div></aside><aside id="cool_tag_cloud-2" class="widget widget_cool_tag_cloud"><h3 class="widget-title">Recently Searched PNG</h3><div class="cool-tag-cloud"><div class="animation"><div class="ctcsilver"><div class="ctcleft"><div class="arial" style="text-transform:none!important;"><a href="https://www.pngmart.com/image/tag/final-fantasy" class="tag-cloud-link tag-link-561 tag-link-position-1" style="font-size: 13px;">Final Fantasy</a><a href="https://www.pngmart.com/image/tag/flower" class="tag-cloud-link tag-link-213 tag-link-position-2" style="font-size: 13px;">Flower</a><a href="https://www.pngmart.com/image/tag/star-wars" class="tag-cloud-link tag-link-298 tag-link-position-3" style="font-size: 13px;">Star Wars</a><a href="https://www.pngmart.com/image/tag/dog" class="tag-cloud-link tag-link-155 tag-link-position-4" style="font-size: 13px;">Dog</a><a href="https://www.pngmart.com/image/tag/tv-shows" class="tag-cloud-link tag-link-729 tag-link-position-5" style="font-size: 13px;">TV Shows</a><a href="https://www.pngmart.com/image/tag/reptile" class="tag-cloud-link tag-link-1809 tag-link-position-6" style="font-size: 13px;">Reptile</a><a href="https://www.pngmart.com/image/tag/christmas" class="tag-cloud-link tag-link-111 tag-link-position-7" style="font-size: 13px;">Christmas</a><a href="https://www.pngmart.com/image/tag/anime" class="tag-cloud-link tag-link-596 tag-link-position-8" style="font-size: 13px;">Anime</a><a href="https://www.pngmart.com/image/tag/spring" class="tag-cloud-link tag-link-1712 tag-link-position-9" style="font-size: 13px;">Spring</a><a href="https://www.pngmart.com/image/tag/arrow" class="tag-cloud-link tag-link-417 tag-link-position-10" style="font-size: 13px;">Arrow</a><a href="https://www.pngmart.com/image/tag/wwe" class="tag-cloud-link tag-link-320 tag-link-position-11" style="font-size: 13px;">WWE</a><a href="https://www.pngmart.com/image/tag/halloween" class="tag-cloud-link tag-link-196 tag-link-position-12" style="font-size: 13px;">Halloween</a><a href="https://www.pngmart.com/image/tag/american-football-team" class="tag-cloud-link tag-link-555 tag-link-position-13" style="font-size: 13px;">American Football Team</a><a href="https://www.pngmart.com/image/tag/antique" class="tag-cloud-link tag-link-1355 tag-link-position-14" style="font-size: 13px;">Antique</a><a href="https://www.pngmart.com/image/tag/flowers" class="tag-cloud-link tag-link-105 tag-link-position-15" style="font-size: 13px;">Flowers</a><a href="https://www.pngmart.com/image/tag/chair" class="tag-cloud-link tag-link-2247 tag-link-position-16" style="font-size: 13px;">Chair</a><a href="https://www.pngmart.com/image/tag/tekken" class="tag-cloud-link tag-link-874 tag-link-position-17" style="font-size: 13px;">Tekken</a><a href="https://www.pngmart.com/image/tag/disney" class="tag-cloud-link tag-link-542 tag-link-position-18" style="font-size: 13px;">Disney</a><a href="https://www.pngmart.com/image/tag/hat" class="tag-cloud-link tag-link-474 tag-link-position-19" style="font-size: 13px;">Hat</a><a href="https://www.pngmart.com/image/tag/naruto" class="tag-cloud-link tag-link-1063 tag-link-position-20" style="font-size: 13px;">Naruto</a><a href="https://www.pngmart.com/image/tag/heart" class="tag-cloud-link tag-link-192 tag-link-position-21" style="font-size: 13px;">Heart</a><a href="https://www.pngmart.com/image/tag/abstract" class="tag-cloud-link tag-link-613 tag-link-position-22" style="font-size: 13px;">Abstract</a><a href="https://www.pngmart.com/image/tag/emoji" class="tag-cloud-link tag-link-3045 tag-link-position-23" style="font-size: 13px;">Emoji</a><a href="https://www.pngmart.com/image/tag/easter-eggs" class="tag-cloud-link tag-link-126 tag-link-position-24" style="font-size: 13px;">Easter Eggs</a><a href="https://www.pngmart.com/image/tag/easter" class="tag-cloud-link tag-link-127 tag-link-position-25" style="font-size: 13px;">Easter</a></div></div></div></div></div></aside><aside id="custom_html-16" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="adsbyvli" style="width:300px; height:600px" data-ad-slot="vi_1141143427"></div> <script type="rocketlazyloadscript">(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_1141143427") })</script></div></aside>		</div><!-- .xoxo -->
+	</div><!-- .widget-area -->
+</div><!-- #sidebar .widget-area -->
+<div style="clear:both;"></div>
+
+	</div><!-- #contentcontainer -->
+
+</div><!-- #wrapper -->
+
+<div id="footer">
+	<div id="colophon" class="container_16 containermargin" role="contentinfo">
+		<div id="footer-info">
+			<div id="copyright">&copy; 2016 - 2021. <a href="/" title="PNG Mart">PNG Mart</a></div>
+			<div class="menu footernav"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="/">Home</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://www.pngmart.com/about">About</a></li>
+<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://www.pngmart.com/contact">Contact</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="https://www.pngmart.com/copyright-policy">Copyright</a></li>
+<li id="menu-item-189723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189723"><a href="https://www.pngmart.com/cookie-policy">Cookie Policy</a></li>
+<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="https://www.pngmart.com/privacy-policy">Privacy</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="https://www.pngmart.com/terms-conditions">Terms &#038; Conditions</a></li>
+<li id="menu-item-142703" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142703"><a href="/upload">Upload PNG</a></li>
+<li id="menu-item-59360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59360"><a href="/sitemap.xml/">Sitemap</a></li>
+</ul></div>		</div>
+		<div class="clear"></div>
+		<div id="site-generator">
+			
+		</div>
+	</div><!-- #colophon -->
+	<div style="clear:both;"></div>
+</div><!-- #footer -->
+
+    <script type="rocketlazyloadscript">
+        function coolTagCloudToggle( element ) {
+            var parent = element.closest('.cool-tag-cloud');
+            parent.querySelector('.cool-tag-cloud-inner').classList.toggle('cool-tag-cloud-active');
+            parent.querySelector( '.cool-tag-cloud-load-more').classList.toggle('cool-tag-cloud-active');
+        }
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.pngmart.com/wp-includes/js/comment-reply.min.js?ver=1e96cb0d6776511765e583fc42e2acca' id='comment-reply-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin|\/logout|\/wp-login.php","usesTrailingSlash":"","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/www.pngmart.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://www.pngmart.com/wp-content/cache/min/1/wp-content/themes/pngmart/js/html5.js?ver=1641641517' id='htlml5-js'></script>
+<script type='text/javascript' id='ivory-search-scripts-js-extra'>
+/* <![CDATA[ */
+var IvorySearchVars = {"is_analytics_enabled":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.pngmart.com/wp-content/plugins/add-search-to-menu/public/js/ivory-search.min.js?ver=4.8.1' id='ivory-search-scripts-js'></script>
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.pngmart.com/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script></body>
+</html>

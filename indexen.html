@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khula • ხულა</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shekveta.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <img id="loading-image" src="./images/loader.gif" alt="loading...">
+    </div>
+    <div class="contfull" id="contfull">
+    <div id="conts" class="container">
+        <div class="logotext">
+        <div>
+            <p class="khulag">ხულა</p>
+        </div>
+        <div>
+            <img height="100px"  class="logoimg" src="./images/264960237_106552825212202_972583597574527585_n.jpg" alt="logo">
+            </div>
+            <div>
+                <p class="khula">KHULA</p>
+            </div>
+            </div>
+            <div id="headermain" class="links">
+                <a href="./index.html">MAIN PAGE</a>
+
+                <div class="dropdown">
+                <a class="dropname" href="./products.html">PRODUCTS</a>
+                <div class="dropdown-content">
+                    <ul class="ulup"> 
+                        <li><a href="./sulguni.html">SULGUNI</a><br></li>
+                        <li><a href="./imeruli.html">IMERETIAN</a><br></li>
+                        <li><a href="./karkhnuli.html">KARKHNULI</a><br></li>
+                        <li><a href="./tchetchili.html">TCHETCHILI</a><br></li>
+                        <li><a href="./milk.html">MILK</a><br></li>
+                        <li><a href="./matsoni.html">MATSONI</a><br></li>
+
+                    </ul>
+                    <hr class="khazi"> 
+                    <br>
+                    <ul>
+                        <li><a href="./nuts.html">NUTS</a><br></li>
+                        <li><a href="./honey.html">HONEY</a><br></li>
+                        <li><a href="./lobio.html">BEENS</a><br></li>
+                        <li><a href="./eggs.html">EGGS</a><br></li>
+                        <li><a href="./mtchadisPkvili.html">CORN FLOUR</a><br></li>
+                        <li><a href="./churchkhela.html">CHURCHKHELA</a><br></li>
+                    </ul>
+            </div>
+            </div>
+            
+            
+            <div>
+            <button id="shekvetabtn" onclick="function shekvetamtavari()">ORDER</button>
+        </div>
+            <a href="./misamarti.html">ADRESS</a>
+                <a href="./contact.html">CONTACT</a>
+                <a href="./index.html"><img width="30px" src="./images/georgian.png"></a>
+            </div>
+    </div>
+    <div class="whole">
+    <div class="info">
+    <div class="imagewrap">
+        <img class="cheese" src="./images/kveli.jpg" alt="cheese">
+    </div>
+    <div class="text">
+        <h2>SULGUNI</h2><br><br>
+        <p>Sulguni - a type of Georgian cheese. Made from fresh cow or buffalo milk. Traditionally produced in Samegrelo and Svaneti regions. When making sulguni, freshly extracted "infant" cheese is dipped in milk or warm water and boiled by hand until it is extracted. This mass is then sprinkled with salt, wrapped in round heads, soaked in cold water once, and then stored in a bowl. The shelf life is characterized by smoked sulguni, which is dense and has a specific pleasant smell and taste.</p>
+    </div>
+    </div>
+    <div class="info"> 
+        <div class="text1">
+            <h2>IMERETIAN</h2><br><br>
+            <p>Imeretian cheese is a favorite ingredient in Georgian cuisine, most commonly in the famous Georgian cheese-bread called khachapuri. It’s also great in salads and can be added to practically any dish that requires a mild melted cheese.
+
+                Georgia’s markets have mountains of these disc shaped cheeses but you can also buy them in little shops or kiosks and from people who make their cheese at home and sell it to passers by in the streets. The average price for a kilo of Imeretian cheese in Tbilisi is 6 lari ($3.69). It becomes cheaper in summer when milk yields are higher.</p>
+        </div>
+        <div class="imagewrap">
+            <img class="cheese" src="./images/im-kveli.jpg" alt="cheese">
+        </div>
+        </div>
+        <div class="info">
+            <div class="imagewrap">
+                <img class="cheese" src="./images/kar-kveli.jpg" alt="cheese">
+            </div>
+            <div class="text">
+                <h2>KARKHNULI</h2><br><br>
+                <p>The idea of creating the Cheese Fest came later. But before that, she searched for people making authentic types of cheese and she always found them. Some people thought she was crazy, some were joking about it and others just looked at it skeptically. Indeed, she stubbornly kept her way, traveled around the regions in search for the cheese makers. At some point, she realized that the “materials” she collected were sufficient for the “Cheese Fest” and submitted her project to the Ministry of Economy. </p>
+            </div>
+            </div>
+        </div>
+        </div>
+            <div id="maindiv1" class="maindiv1">
+        
+                <div id="shekvetadiv" class="shekvetadiv">
+                    <div>
+                    <span  onclick="function daxurva()" class="close" id="close" >&times;</span>
+                </div>
+                    <form action="./succses.html">
+                        <label  for="product">CHOOSE THE PRODUCT</label><br>
+                        <select  onchange="myFunction()" name="product" id="product" required>
+                        <option value="16.90">IMERETIAN</option>
+                        <option data-price="22.90" value="sulguni">SULGUNI</option>
+                        <option value="29.90">NUTS</option>
+                        <option value="4.90">CHURCHKHELA</option>
+                        <option value="4.90">MILK</option>
+                        <option value="29.90">HONEY</option>
+                        <option value="4.00">MATSONI</option>
+                        <option value="3.50">CORN FLOUR</option>
+                        <option value="0.60">EGGS</option>
+                        <option value="13.90">BEENS</option>
+                        <option value="27.90">TCHETCHILI</option>
+                        <option value="19.90">KARKHNULI</option>
+                    </select>
+                    <p class="fasii" id="fasi"> </p><br><hr><br><br>
+                    <label for="tsona">QUANTITY</label>
+                    <input title="რაოდენობა" onkeyup="myFunction()" maxlength="2" type="number" value="" id="tsona" name="tsona" placeholder="მიუთითეთ სასურველი რაოდენობა" required>
+                    <label for="tel">PHONE NUMBER</label>
+                    <input type="number" id="tel" name="telephoni" placeholder="მიუთითეთ ტელეფონის ნომერი" required>
+                    <label for="misamarrti">ADRESS</label>
+                    <input type="text" id="misamarrti" name="misamarrti" placeholder="მიუთითეთ საცხოვრებელი მისამართი" required>
+                    <label for="tel">COMMENT</label>
+                    <input type="text" id="comment" name="comment" placeholder="დაამატეთ სასურველი ტექსტი">
+                    <p class="fasii" id="jami"></p>
+                    <input type="submit" value="ORDER">
+                 </form>   
+                </div>
+            </div>
+
+            <!-- footer -->
+            <br><br><br><hr><hr><hr>
+            <div class="footercontainer">
+        <div class="footer">
+            <div class="aboutus">
+                <h3>ABOUT US</h3>
+                <br>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis est quisquam et cumque nam laborum neque impedit minus, ex dicta atque itaque odit voluptates repudiandae commodi quidem rem voluptatibus voluptatum.</p>
+                       <div class="footerlogo">
+                <img class="sociallogo" width="200px" src="./images/social.png" alt="footerlogo">
+            </div>
+         </div>
+            <div class="footerleft">
+                <h3>ALL</h3>
+                <a href="./index.html">TERMS AND CONDITIONS</a>
+                <a href="./index.html">PRIVACY POLICY </a>
+                <a href="./index.html">FAQ</a>
+                <a href="./index.html">ORDERING INSTRUCTIONS</a>
+                <a href="./index.html">REPORT</a>
+
+            </div>
+
+            <div class="footerright">
+                <h3>LINKS</h3>
+                <a href="./index.html">SUBSCRIBE</a>
+                <a href="./index.html">ONLINE HELP</a>
+                <a href="./index.html">FEEDBACK</a>
+                <a href="./index.html">SITEMAP</a>
+                <a href="./index.html">HISTORY</a>
+
+            </div>
+
+        </div>
+        <div class="companyname">
+            <strong>Khula • ხულა</strong><br> <p>ALL RIGHTS RESERVED</p><br><p>2021-2022</p>
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fuxplanet.org%2Fusing-loading-animation-on-websites-and-apps-examples-and-snippets-to-use-cab0097be9f1&psig=AOvVaw1f9NKZl7WMOIt0a4kgpDBe&ust=1643455290892000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKDK-52q1PUCFQAAAAAdAAAAABAD" alt="" srcset="">
+        </div>
+        </div>
+       
+            <script src="./shekveta.js"></script>
+            <script>
+                $(window).on('load', function() {
+                    $('#loading').hide();});
+                
+            </script>
+
+</body>
+</html>

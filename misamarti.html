@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khula • ხულა</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shekveta.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <div id="loading">
+        <img id="loading-image" src="./images/loader.gif" alt="loading...">
+    </div>
+    <div class="contfull" id="contfull">
+    <div id="conts" class="container">
+        <div class="logotext">
+            <div>
+                <p class="khulag">ხულა</p>
+            </div>
+            <div>
+                <img height="100px"  class="logoimg" src="./images/264960237_106552825212202_972583597574527585_n.jpg" alt="logo">
+                </div>
+                <div>
+                    <p class="khula">KHULA</p>
+                </div>
+                </div>
+            <div class="links">
+                <a href="./index.html">მთავარი</a>
+
+                <div class="dropdown">
+                <button href="./index.html" class="dropbtn" tabindex="1">პროდუქტები</button> 
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="./sulguni.html">სულგუნი</a><br></li>
+                        <li><a href="./imeruli.html">იმერული</a><br></li>
+                        <li><a href="./karkhnuli.html">ქარხნული</a><br></li>
+                        <li><a href="./tchetchili.html">ჩეჩილი</a><br></li>
+                        <li><a href="./milk.html">რძე</a><br></li>
+                        <li><a href="./matsoni.html">მაწონი</a><br></li>
+
+                    </ul>
+                    <hr class="khazi"> 
+                    <br>
+                    <ul>
+                        <li><a href="./nuts.html">კაკალი</a><br></li>
+                        <li><a href="./honey.html">თაფლი</a><br></li>
+                        <li><a href="./lobio.html">სოფლის ლობიო</a><br></li>
+                        <li><a href="./eggs.html">კვერცხი</a><br></li>
+                        <li><a href="./mtchadisPkvili.html">მჭადის ფქვილი</a><br></li>
+                        <li><a href="./churchkhela.html">ჩურჩხელა</a><br></li>
+                    </ul>
+            </div>
+            </div>
+            
+            <div>
+            <button id="shekvetabtn" onclick="function shekvetamtavari()">შეკვეთა</button>
+        </div>
+            <a href="./index.html">მისამართი</a>
+                <a href="./index.html">კონტაქტი</a>
+            </div>
+    </div>
+    <div class="misamarrti">
+        <div class="ruka" id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.749162246795!2d44.745063114938745!3d41.725931282902906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044731ba5b7b88d%3A0x590302dc001d8933!2s39%20Vazha%20Pshavela%20Ave%2C%20T&#39;bilisi!5e0!3m2!1sen!2sge!4v1642934043750!5m2!1sen!2sge" width="800" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="misamartebi">
+            <strong>მისამართი:</strong><br><hr><br>
+            <p>ვაკე, ფალიაშვილის 39ა.</p>
+            <br><br><hr><br><br>
+            <p>საბურთალო, ვაჟა-ფშაველას 87.</p>
+            <br><br><hr><br><br>
+            <p>გლდანი, ხიზანიშვილის 37ა.</p>
+            <br><br><hr><br><br>
+            <p>ავლაბარი, ღვინის აღმართი, 20.</p>
+        </div>
+    </div>
+    </div>
+    
+
+            <div id="maindiv1" class="maindiv1">
+        
+                <div id="shekvetadiv" class="shekvetadiv">
+                    <div>
+                    <span  onclick="function daxurva()" class="close" id="close" >&times;</span>
+                </div>
+                    <form action="./succses.html">
+                        <label for="product">აირჩიეთ პროდუქტი</label><br>
+                        <select name="product" id="product" required>
+                        <option value="imeruli">იმერული</option>
+                        <option value="sulguni">სულგუნი</option>
+                        <option value="kakali">კაკალი</option>
+                        <option value="sulguni">ჩურჩხელა</option>
+                        <option value="sulguni">რძე</option>
+                        <option value="sulguni">თაფლი</option>
+                        <option value="sulguni">მაწონი</option>
+                        <option value="sulguni">მჭადის ფქვილი</option>
+                        <option value="sulguni">კვერცხი</option>
+                        <option value="sulguni">ლობიო</option>
+                        <option value="sulguni">ჩეჩილი</option>
+                        <option value="sulguni">ქარხნული</option>
+                    </select>
+                    
+                    <label for="tsona">რაოდენობა</label>
+                    <input type="number" id="tsona" name="tsona" placeholder="მიუთითეთ სასურველი რაოდენობა" required>
+                    <label for="tel">ტელ. ნომერი</label>
+                    <input type="number" id="tel" name="telephoni" placeholder="მიუთითეთ ტელეფონის ნომერი" required>
+                    <label for="misamarrti">მისამართი</label>
+                    <input type="text" id="misamarrti" name="misamarrti" placeholder="მიუთითეთ საცხოვრებელი მისამართი" required>
+                    <label for="tel">კომეტარი</label>
+                    <input type="text" id="comment" name="comment" placeholder="დაამატეთ სასურველი ტექსტი">
+                    <input type="submit" value="გაგზავნა">
+                 </form>     
+                </div>
+            </div>
+             <!-- footer -->
+             <br><br><br><hr><hr><hr>
+             <div class="footercontainer">
+         <div class="footer">
+             <div class="aboutus">
+                 <h3>ჩვენს შესახებ</h3>
+                 <br>
+                 <br>
+                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis est quisquam et cumque nam laborum neque impedit minus, ex dicta atque itaque odit voluptates repudiandae commodi quidem rem voluptatibus voluptatum.</p>
+                        <div class="footerlogo">
+                 <img class="sociallogo" width="200px" src="./images/social.png" alt="footerlogo">
+             </div>
+          </div>
+             <div class="footerleft">
+                 <h3>ზოგადი</h3>
+                 <a href="./index.html">წესები და პირობები</a>
+                 <a href="./index.html">კონფიდენციალურობის პოლიტიკა</a>
+                 <a href="./index.html">ხშირად დასმული შეკითხვები</a>
+                 <a href="./index.html">შეკვეთის ინსტრუქცია</a>
+                 <a href="./index.html">რეპორტი</a>
+ 
+             </div>
+ 
+             <div class="footerright">
+                 <h3>ლინკები</h3>
+                 <a href="./index.html">სიახლეების გამოწერა</a>
+                 <a href="./index.html">ონლაინ დახმარება</a>
+                 <a href="./index.html">უკუკავშირი</a>
+                 <a href="./index.html">საიტის რუკა</a>
+                 <a href="./index.html">ისტორია</a>
+ 
+             </div>
+ 
+         </div>
+         <div class="companyname">
+             <strong>Khula • ხულა</strong><br> <p>ALL RIGHTS RESERVED</p><br><p>2021-2022</p>
+         </div>
+         </div>
+            
+            <script src="./shekveta.js"></script>
+            <script>
+                $(window).on('load', function() {
+                    $('#loading').hide();});
+                
+            </script>
+
+</body>
+</html>
