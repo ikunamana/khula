@@ -417,3 +417,28 @@ input[type=submit]:hover{
 
 
 /* //card// */
+
+@media screen and (max-width: 414px){
+    .links{
+        margin-top: 200%;
+        height: 80px;
+        align-items: center;
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        width:414px;  
+        background-color: rgba(255, 255, 255, 0.178);
+        backdrop-filter: blur(10px);
+        z-index: 999;
+        transition-duration: 1s;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 410px;
+    padding-top: 10%;
+    transition-duration: 1s;
+    }
+}
