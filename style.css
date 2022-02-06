@@ -464,7 +464,6 @@ input[type=submit]:hover{
 }
 
 .misamartebi{
-    padding: 30px;
     backdrop-filter: blur(10px);
     background-color: rgba(24, 5, 92, 0.274);
     color: rgb(0, 0, 0);
