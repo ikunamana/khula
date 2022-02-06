@@ -1234,5 +1234,23 @@ h3{
     .sociallogo{
         padding-top: 10px;
     }
+        .ruka{
+        width: 380px;
+        height: 300px;
+    }
+    .googleruka{
+        margin-top: 30px;
+        width: 380px;
+        height: 300px;
+    }
+    .misamarrti{
+        flex-direction: column-reverse;
+        overflow-x: hidden;
+        object-fit: scale-down;
+    }
+    .hedermain{
+        width: 414px;
+        object-fit: scale-down;
+    }
     
 }
